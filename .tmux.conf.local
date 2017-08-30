@@ -27,7 +27,7 @@ tmux_conf_new_pane_retain_current_path=true
 # new pane tries to reconnect ssh sessions (experimental), possible values are:
 #   - true
 #   - false (default)
-tmux_conf_new_pane_reconnect_ssh=false
+tmux_conf_new_pane_reconnect_ssh=true
 
 # prompt for session name when creating a new session, possible values are:
 #   - true
@@ -322,3 +322,15 @@ set -g terminal-overrides "xterm*:XT:smcup@:rmcup@:kUP5=\eOA:kDN5=\eOB:kLFT5=\eO
 
 # move status line to top
 #set -g status-position top
+#
+#
+
+set -g focus-events on
+
+#fingers settings
+set -g @fingers-compact-hints 0
+
+#tmux-fpp settings
+set -g @fpp-key 'x'
+
+run '~/.tmux/plugins/tpm/tpm'
